@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.regex.Pattern
@@ -35,9 +36,11 @@ class RegistryActivity : AppCompatActivity() {
         telefonoUsuario = findViewById(R.id.editTextPhoneReg)
         passwordUsuario = findViewById(R.id.editTextPwReg)
         confirmarPasswordUsuario = findViewById(R.id.editTextConfirmaPwReg)
+
+        db = FirebaseFirestore.getInstance()
     }
 
-    fun onClickRegistrarUsuario(view: View){
+    fun onClickRegistrarUsuario(view: View) {
 
         nombre = nombreUsuario.text.toString()
         apellido = apellidoUsuario.text.toString()
@@ -46,7 +49,7 @@ class RegistryActivity : AppCompatActivity() {
         password = passwordUsuario.text.toString()
         confirmacion = confirmarPasswordUsuario.text.toString()
 
-        when{
+        when {
             nombre.isEmpty() -> {
                 nombreUsuario.error = "Campo obligatorio"
             }
@@ -62,6 +65,9 @@ class RegistryActivity : AppCompatActivity() {
             telefono.isEmpty() -> {
                 telefonoUsuario.error = "Campo obligatorio"
             }
+            telefono.length < 10 -> {
+                telefonoUsuario.error = "Número celular no valido"
+            }
             password.isEmpty() -> {
                 passwordUsuario.error = "Campo obligatorio"
             }
@@ -75,7 +81,21 @@ class RegistryActivity : AppCompatActivity() {
                 confirmarPasswordUsuario.error = "La confirmacion no coincide con la contraseña"
             }
             else -> {
+                val user: MutableMap<String, Any> = HashMap()
+                user["nombre"] = nombre
+                user["apellido"] = apellido
+                user["email"] = email
+                user["telefono"] = telefono
+                user["password"] = password
 
+                db.collection("usuarios")
+                    .add(user)
+                    .addOnSuccessListener { documentReference ->
+                        Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(this,"Error adding document",Toast.LENGTH_LONG).show()
+                    }
                 // Intent y funcion de validacion con email
             }
         }
