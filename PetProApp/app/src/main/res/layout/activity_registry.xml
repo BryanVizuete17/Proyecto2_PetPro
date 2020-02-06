@@ -47,8 +47,9 @@
             android:layout_marginEnd="32dp"
             android:ems="10"
             android:hint="@string/edit_text_nombre"
+            app:layout_constraintBottom_toTopOf="@+id/editTextApellidoReg"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,38 +57,41 @@
             android:id="@+id/editTextPwReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/edit_text_contraseña"
             android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/editTextConfirmaPwReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextPhoneReg"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPhoneReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhoneReg" />
-
 
         <Button
             android:id="@+id/buttonAceptarRegistro"
             android:layout_width="122dp"
             android:layout_height="47dp"
-            android:layout_marginBottom="80dp"
-            android:background="@android:color/holo_blue_light"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/button_continuarReg"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.546"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/editTextConfirmaPwReg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/editTextConfirmaPwReg"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmaPwReg" />
 
         <EditText
             android:id="@+id/editTextApellidoReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/edit_text_apellido"
             android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/editTextEmailReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextNombreReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextNombreReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextNombreReg" />
 
@@ -95,13 +99,14 @@
             android:id="@+id/editTextEmailReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
 
             android:hint="@string/edit_text_email"
             android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPhoneReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextApellidoReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextApellidoReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextApellidoReg" />
 
@@ -109,12 +114,13 @@
             android:id="@+id/editTextPhoneReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/edit_text_telefono"
             android:inputType="phone"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPwReg"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmailReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextEmailReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
 
@@ -123,11 +129,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:ems="10"
             android:hint="@string/edit_text_confirmaPw"
             android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/buttonAceptarRegistro"
             app:layout_constraintEnd_toEndOf="@+id/editTextPwReg"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPwReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextPwReg" />
     </androidx.constraintlayout.widget.ConstraintLayout>

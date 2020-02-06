@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">PetProApp</string>
     <string name="registry_tittle">Registro</string>
-    <string name="edit_text_nombre">Ingrese su nombre</string>
-    <string name="edit_text_apellido">Ingrese su apellido</string>
-    <string name="edit_text_email">Ingrese su correo electrónico</string>
-    <string name="edit_text_telefono">Ingrese su número telefónico</string>
-    <string name="edit_text_contraseña">Ingrese su contraseña</string>
-    <string name="edit_text_confirmaPw">Confirme su contraseña</string>
+    <string name="edit_text_nombre">Nombre*</string>
+    <string name="edit_text_apellido">Apellido*</string>
+    <string name="edit_text_email">Correo electrónico*</string>
+    <string name="edit_text_telefono">Teléfono*</string>
+    <string name="edit_text_contraseña">Contraseña*</string>
+    <string name="edit_text_confirmaPw">Confirmación contraseña*</string>
     <string name="button_continuarReg">Continuar</string>
 </resources>
