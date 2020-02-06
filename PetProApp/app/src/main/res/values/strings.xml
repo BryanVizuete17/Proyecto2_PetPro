@@ -8,4 +8,5 @@
     <string name="edit_text_contraseña">Contraseña*</string>
     <string name="edit_text_confirmaPw">Confirmación contraseña*</string>
     <string name="button_continuarReg">Continuar</string>
+    <string name="text_view_campos_obligatorios">*Campo Requerido</string>
 </resources>

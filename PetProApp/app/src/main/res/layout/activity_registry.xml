@@ -102,7 +102,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:ems="10"
-
             android:hint="@string/edit_text_email"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/editTextPhoneReg"
@@ -139,6 +138,20 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPwReg"
             app:layout_constraintTop_toBottomOf="@+id/editTextPwReg" />
+
+        <TextView
+            android:id="@+id/textViewCampoRequerido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_campos_obligatorios"
+            android:textColor="?attr/colorError"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNombreReg"
+            app:layout_constraintEnd_toEndOf="@+id/editTextNombreReg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextNombreReg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.609" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
