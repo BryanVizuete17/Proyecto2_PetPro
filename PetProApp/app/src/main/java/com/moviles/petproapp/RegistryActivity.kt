@@ -35,6 +35,7 @@ class RegistryActivity : AppCompatActivity() {
                 email.setError("Campo obligatorio")
             }
 
+
             if (phone.text.toString().isEmpty()) {
                 phone.setError("Campo obligatorio")
             }
