@@ -109,25 +109,27 @@
             android:id="@+id/editTextPhoneReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="@string/edit_text_telefono"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmailReg"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextEmailReg"
-            tools:layout_editor_absoluteY="229dp" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
 
         <EditText
             android:id="@+id/editTextConfirmaPwReg"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/edit_text_confirmaPw"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="@+id/editTextPwReg"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextPwReg"
-            tools:layout_editor_absoluteY="347dp" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextPwReg" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
