@@ -75,6 +75,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
+            android:onClick="onClickRegistrarUsuario"
             android:text="@string/button_continuarReg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/editTextConfirmaPwReg"
