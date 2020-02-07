@@ -110,6 +110,7 @@ class RegistryActivity : AppCompatActivity() {
             .addOnSuccessListener { documentReference ->
                 // Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
                 val intentVerificarCorreo = Intent(this, VerifyActivity::class.java)
+                intentVerificarCorreo.putExtra("email", email)
                 startActivity(intentVerificarCorreo)
                 finish()
             }
