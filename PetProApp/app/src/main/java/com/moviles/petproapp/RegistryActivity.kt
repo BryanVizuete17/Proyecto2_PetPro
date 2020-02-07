@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.regex.Pattern
 
@@ -92,14 +93,9 @@ class RegistryActivity : AppCompatActivity() {
                     "password" to password
                 )
 
-                db.collection("usuarios")
-                    .add(user as Map<String, Any>)
-                    .addOnSuccessListener { documentReference ->
-                        Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
-                    }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(this,"Error adding document",Toast.LENGTH_LONG).show()
-                    }
+                createNewAccount()
+                sendToFirestore(user)
+
                 // Intent y funcion de validacion con email
             }
         }
@@ -108,5 +104,52 @@ class RegistryActivity : AppCompatActivity() {
     private fun validarEmail(email: String): Boolean {
         val pattern: Pattern = Patterns.EMAIL_ADDRESS
         return pattern.matcher(email).matches()
+    }
+
+    private fun sendToFirestore(user: HashMap<String, String>) {
+        db.collection("usuarios")
+            .add(user as Map<String, Any>)
+            .addOnSuccessListener { documentReference ->
+                Toast.makeText(
+                    this,
+                    "DocumentSnapshot added with ID: " + documentReference.id,
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Error adding document", Toast.LENGTH_LONG).show()
+            }
+    }
+
+    private fun createNewAccount() {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(
+                        this,
+                        "createUserWithEmail:success",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    val user: FirebaseUser? = auth.currentUser
+                    verifyAccountWithEmail(user)
+                } else {
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+    }
+
+    private fun verifyAccountWithEmail(user: FirebaseUser?) {
+        user?.sendEmailVerification()
+            ?.addOnCompleteListener(this){task ->
+                if(task.isSuccessful){
+                    Toast.makeText(this,"Email enviado",Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this,"Error enviando el correo",Toast.LENGTH_LONG).show()
+                }
+
+            }
     }
 }
