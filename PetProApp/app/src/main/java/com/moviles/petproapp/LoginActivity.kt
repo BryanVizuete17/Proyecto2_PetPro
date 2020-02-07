@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
 
@@ -49,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun onClickButtonRegistro(view: View) {
-        val prIntent: Intent = Intent(this, RegistryActivity::class.java)
+        val prIntent = Intent(this, RegistryActivity::class.java)
         startActivity(prIntent)
     }
 
@@ -57,11 +58,16 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(usuario,password)
             .addOnCompleteListener(this){task ->
                 if (task.isSuccessful){
-                    val intentHome = Intent(this,HomeActivity::class.java)
-                    startActivity(intentHome)
-                    finish()
+                    var user = auth.currentUser
+                    if (user!!.isEmailVerified){
+                        val intentHome = Intent(this,HomeActivity::class.java)
+                        startActivity(intentHome)
+                        finish()
+                    }else{
+                        Toast.makeText(this, "Verificar su cuenta para poder iniciar sesion", Toast.LENGTH_LONG).show()
+                    }
                 }else{
-                    Toast.makeText(this, "Error durante la autenticación", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "El usuario o contraseña son incorrectas", Toast.LENGTH_LONG).show()
                 }
             }
     }
