@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.regex.Pattern
 
@@ -19,6 +20,7 @@ class RegistryActivity : AppCompatActivity() {
     private lateinit var passwordUsuario: EditText
     private lateinit var confirmarPasswordUsuario: EditText
     private lateinit var db: FirebaseFirestore
+    private lateinit var auth: FirebaseAuth
     private lateinit var nombre: String
     private lateinit var apellido: String
     private lateinit var email: String
@@ -38,6 +40,7 @@ class RegistryActivity : AppCompatActivity() {
         confirmarPasswordUsuario = findViewById(R.id.editTextConfirmaPwReg)
 
         db = FirebaseFirestore.getInstance()
+        auth = FirebaseAuth.getInstance()
     }
 
     fun onClickRegistrarUsuario(view: View) {
@@ -81,15 +84,16 @@ class RegistryActivity : AppCompatActivity() {
                 confirmarPasswordUsuario.error = "La confirmacion no coincide con la contraseña"
             }
             else -> {
-                val user: MutableMap<String, Any> = HashMap()
-                user["nombre"] = nombre
-                user["apellido"] = apellido
-                user["email"] = email
-                user["telefono"] = telefono
-                user["password"] = password
+                val user = hashMapOf(
+                    "nombre" to nombre,
+                    "apellido" to apellido,
+                    "email" to email,
+                    "telefono" to telefono,
+                    "password" to password
+                )
 
                 db.collection("usuarios")
-                    .add(user)
+                    .add(user as Map<String, Any>)
                     .addOnSuccessListener { documentReference ->
                         Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
                     }
