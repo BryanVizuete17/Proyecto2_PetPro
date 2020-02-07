@@ -13,5 +13,6 @@
     <string name="button_inicio_sesion_login">Iniciar sesión</string>
     <string name="text_view_mensaje">Si no tienes cuenta, registrate</string>
     <string name="button_registrar_login">Registrar</string>
+    <string name="verify_tittle">Verificar Cuenta</string>
 
 </resources>
