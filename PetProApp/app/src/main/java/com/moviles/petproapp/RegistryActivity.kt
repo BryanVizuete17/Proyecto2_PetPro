@@ -94,8 +94,7 @@ class RegistryActivity : AppCompatActivity() {
                     "password" to password
                 )
 
-                createNewAccount()
-                sendToFirestore(user)
+                createNewAccount(user)
             }
         }
     }
@@ -119,13 +118,14 @@ class RegistryActivity : AppCompatActivity() {
             }
     }
 
-    private fun createNewAccount() {
+    private fun createNewAccount(usuario: HashMap<String, String>) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Toast.makeText(this, "createUserWithEmail:success", Toast.LENGTH_LONG).show()
                     val user: FirebaseUser? = auth.currentUser
                     verifyAccountWithEmail(user)
+                    sendToFirestore(usuario)
                 } else {
                     Toast.makeText(
                         baseContext, "Authentication failed.",
