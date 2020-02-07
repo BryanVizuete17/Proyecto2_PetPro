@@ -1,5 +1,6 @@
 package com.moviles.petproapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
@@ -95,8 +96,6 @@ class RegistryActivity : AppCompatActivity() {
 
                 createNewAccount()
                 sendToFirestore(user)
-
-                // Intent y funcion de validacion con email
             }
         }
     }
@@ -110,14 +109,13 @@ class RegistryActivity : AppCompatActivity() {
         db.collection("usuarios")
             .add(user as Map<String, Any>)
             .addOnSuccessListener { documentReference ->
-                Toast.makeText(
-                    this,
-                    "DocumentSnapshot added with ID: " + documentReference.id,
-                    Toast.LENGTH_LONG
-                ).show()
+                // Toast.makeText(this,"DocumentSnapshot added with ID: " + documentReference.id,Toast.LENGTH_LONG).show()
+                val intentVerificarCorreo = Intent(this, VerifyActivity::class.java)
+                startActivity(intentVerificarCorreo)
+                finish()
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Error adding document", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Error durante registro", Toast.LENGTH_LONG).show()
             }
     }
 
@@ -125,11 +123,7 @@ class RegistryActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(
-                        this,
-                        "createUserWithEmail:success",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    // Toast.makeText(this, "createUserWithEmail:success", Toast.LENGTH_LONG).show()
                     val user: FirebaseUser? = auth.currentUser
                     verifyAccountWithEmail(user)
                 } else {
