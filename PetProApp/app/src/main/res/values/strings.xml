@@ -9,7 +9,7 @@
     <string name="edit_text_confirmaPw">Confirmación contraseña*</string>
     <string name="button_continuarReg">Continuar</string>
     <string name="text_view_campos_obligatorios">*Campo Requerido</string>
-    <string name="text_view_usuario">Usuario*</string>
+    <string name="text_view_usuario">Email*</string>
     <string name="button_inicio_sesion_login">Iniciar sesión</string>
     <string name="text_view_mensaje">Si no tienes cuenta, registrate</string>
     <string name="button_registrar_login">Registrar</string>
