@@ -17,4 +17,9 @@
     <string name="text_view_mensaje_confirmacion">Se ha enviado un mensaje al correo:</string>
     <string name="text_view_mensaje_confirmacion2">Por favor revise su correo electrónico para verificar su cuenta</string>
     <string name="button_fin_registro">Finalizar</string>
+    <string name="home_tittle">Servicios</string>
+    <string name="text_view_paseo">Paseos</string>
+    <string name="text_view_baño">Baños</string>
+    <string name="text_view_hospedaje">Hospedaje</string>
+    <string name="text_view_peluqueria">Peluquería</string>
 </resources>
