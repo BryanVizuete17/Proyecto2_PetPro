@@ -14,5 +14,7 @@
     <string name="text_view_mensaje">Si no tienes cuenta, registrate</string>
     <string name="button_registrar_login">Registrar</string>
     <string name="verify_tittle">Verificar Cuenta</string>
-
+    <string name="text_view_mensaje_confirmacion">Se ha enviado un mensaje al correo:</string>
+    <string name="text_view_mensaje_confirmacion2">Por favor revise su correo electrónico para verificar su cuenta</string>
+    <string name="button_fin_registro">Finalizar</string>
 </resources>

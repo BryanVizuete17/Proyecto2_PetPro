@@ -87,14 +87,14 @@
         android:textColor="@color/colorText"
         android:textSize="18sp"
         android:background="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/textViewMensaje"
+        app:layout_constraintBottom_toTopOf="@+id/textViewMensajeConf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewPwLogin" />
 
     <TextView
-        android:id="@+id/textViewMensaje"
+        android:id="@+id/textViewMensajeConf"
         android:layout_width="354dp"
         android:layout_height="31dp"
         android:layout_marginTop="24dp"
@@ -118,10 +118,10 @@
         android:textSize="18sp"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewMensaje"
+        app:layout_constraintEnd_toEndOf="@+id/textViewMensajeConf"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/textViewMensaje"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMensaje" />
+        app:layout_constraintStart_toStartOf="@+id/textViewMensajeConf"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMensajeConf" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
