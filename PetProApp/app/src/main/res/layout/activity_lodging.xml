@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BathActivity"
+    tools:context=".LodgingActivity"
     android:orientation="vertical"
     android:background="@color/colorPrimary">
 
@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/bath_tittle"
+                android:text="@string/text_view_hospedaje"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorText" />
 
@@ -36,116 +36,115 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ImageView
-            android:id="@+id/imageViewBaño"
+            android:id="@+id/imageViewHospedaje"
             android:layout_width="0dp"
             android:layout_height="165dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bathe1" />
+            app:srcCompat="@drawable/loading" />
 
         <TextView
-            android:id="@+id/textViewInfoBaño"
+            android:id="@+id/textViewInfoHospedaje"
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/text_view_info_baño"
+            android:text="@string/text_view_info_hospedaje"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewBaño" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHospedaje" />
 
         <CheckBox
-            android:id="@+id/checkBoxBañoBasico"
+            android:id="@+id/checkBoxHospedajeBasico"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_basico"
+            android:text="Cuidado Básico"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBaño" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoHospedaje" />
 
         <TextView
-            android:id="@+id/textViewInfoBañoBasico"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_basico"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoBasico" />
-
-        <CheckBox
-            android:id="@+id/checkBoxBañoCompleto"
+            android:id="@+id/textViewHospedajeBasico"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_completo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBañoBasico" />
-
-        <TextView
-            android:id="@+id/textViewInfoBañoCompleto"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_completo"
+            android:text="@string/text_view_hospedaje_basico"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoCompleto" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajeBasico" />
 
         <CheckBox
-            android:id="@+id/checkBoxBañoPremium"
+            android:id="@+id/checkBoxHospedajeCompleto"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/check_box_baño_premium"
+            android:text="@string/check_box_hospedaje_completo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewInfoBañoCompleto" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewHospedajeBasico" />
 
         <TextView
-            android:id="@+id/textViewInfoBañoPremium"
+            android:id="@+id/textViewHospedajeCompleto"
             android:layout_width="0dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="32dp"
-            android:text="@string/text_view_baño_premium"
+            android:text="@string/text_view_hospedaje_completo"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxBañoPremium" />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajeCompleto" />
+
+        <CheckBox
+            android:id="@+id/checkBoxHospedajePremium"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/check_box_hospedaje_premium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHospedajeCompleto" />
+
+        <TextView
+            android:id="@+id/textViewHospedajePremium"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_view_hospedaje_premium"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxHospedajePremium" />
 
         <Button
-            android:id="@+id/buttonAceptarBaño"
+            android:id="@+id/buttonAceptarHospedaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:background="@color/colorPrimaryDark"
-            android:text="@string/button_aceptar_baño"
+            android:text="@string/button_aceptar_hospedaje"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent" />
 
 

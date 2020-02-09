@@ -43,4 +43,14 @@
     <string name="text_view_baño_completo">Shampoo + Acondicionador + Arreglo a tigera de patas - $18</string>
     <string name="text_view_baño_premium">Shampoo + Acondicionador + Arreglo a tigera de patas + Peinado - $25</string>
     <string name="button_aceptar_baño">Aceptar</string>
+    <string name="lodging_tittle">Hospedaje</string>
+    <string name="text_view_info_hospedaje">Nuestro servicio de cuidado ofrece a su perro nuestro mejor cuidado y atención a los demás de
+        nuestra excelente comida.</string>
+    <string name="check_box_hospedaje_basico">Cuidado Básico</string>
+    <string name="check_box_hospedaje_completo">Cuidado Completo</string>
+    <string name="check_box_hospedaje_premium">Cuidado Premium</string>
+    <string name="text_view_hospedaje_basico">Hospedaje - $15</string>
+    <string name="text_view_hospedaje_completo">Hospedaje + Comida - $20</string>
+    <string name="text_view_hospedaje_premium">Hospedaje + Comida + Aseo - $25</string>
+    <string name="button_aceptar_hospedaje">Aceptar</string>
 </resources>
