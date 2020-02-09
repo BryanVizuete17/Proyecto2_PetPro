@@ -107,7 +107,7 @@
             android:layout_marginTop="24dp"
             android:ems="10"
             android:hint="@string/edit_text_edad_mascota"
-            android:inputType="textPersonName"
+            android:inputType="number|textPersonName"
             app:layout_constraintEnd_toEndOf="@+id/editTextNombreMascota"
             app:layout_constraintStart_toStartOf="@+id/editTextNombreMascota"
             app:layout_constraintTop_toBottomOf="@+id/editTextNombreMascota" />
@@ -161,6 +161,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:phoneNumber="false"
             android:text="@string/edit_text_descripcion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
