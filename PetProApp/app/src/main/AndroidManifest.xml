@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HairActivity"></activity>
+        <activity android:name=".RegistryPetActivity"></activity>
+        <activity android:name=".HairActivity" />
         <activity android:name=".LodgingActivity" />
         <activity android:name=".BathActivity" />
         <activity android:name=".WalkActivity" />
