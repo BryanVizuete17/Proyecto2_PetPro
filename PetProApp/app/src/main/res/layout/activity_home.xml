@@ -44,6 +44,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="88dp"
             android:background="@drawable/take"
+            android:onClick="onClickButtonPaseo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,6 +53,7 @@
             android:layout_width="176dp"
             android:layout_height="160dp"
             android:background="@drawable/bathe1"
+            android:onClick="onClickButtonBaño"
             app:layout_constraintBottom_toBottomOf="@+id/buttonPaseo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.466"
@@ -65,6 +67,7 @@
             android:layout_height="182dp"
             android:layout_marginTop="112dp"
             android:background="@drawable/loading"
+            android:onClick="onClickButtonHospedaje"
             app:layout_constraintEnd_toEndOf="@+id/buttonPaseo"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/buttonPaseo"
@@ -75,6 +78,7 @@
             android:layout_width="161dp"
             android:layout_height="176dp"
             android:background="@drawable/pedicure"
+            android:onClick="onClickButtonPeluqueria"
             app:layout_constraintBottom_toBottomOf="@+id/buttonHospedaje"
             app:layout_constraintEnd_toEndOf="@+id/buttonBaño"
             app:layout_constraintHorizontal_bias="0.5"
