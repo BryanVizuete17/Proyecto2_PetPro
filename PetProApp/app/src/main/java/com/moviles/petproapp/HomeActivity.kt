@@ -12,6 +12,9 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
     }
 
+
+    //Conjunto de funciones las cuales responden a los principales servicios
+
     fun onClickButtonPaseo(view: View) {
         val prIntent = Intent(this, WalkActivity::class.java)
         startActivity(prIntent)
