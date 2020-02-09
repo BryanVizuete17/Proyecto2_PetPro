@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WalkActivity"></activity>
+        <activity android:name=".BathActivity"></activity>
+        <activity android:name=".WalkActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".VerifyActivity" />
         <activity android:name=".LoginActivity">

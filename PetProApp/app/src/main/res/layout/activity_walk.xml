@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/take" />
 
         <TextView
-            android:id="@+id/textView20"
+            android:id="@+id/textViewInfoPaseo"
             android:layout_width="333dp"
             android:layout_height="71dp"
             android:layout_marginStart="24dp"
@@ -70,7 +70,18 @@
             app:layout_constraintEnd_toStartOf="@+id/checkBox1Hora"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfoPaseo" />
+
+        <TextView
+            android:id="@+id/textViewPrecio30Minutos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_paseo_30_min"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox30Minutos"
+            app:layout_constraintStart_toStartOf="@+id/checkBox30Minutos"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox30Minutos" />
 
         <CheckBox
             android:id="@+id/checkBox1Hora"
@@ -83,17 +94,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/checkBox30Minutos"
             app:layout_constraintTop_toTopOf="@+id/checkBox30Minutos" />
-
-        <TextView
-            android:id="@+id/textViewPrecio30Minutos"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/text_view_paseo_30_min"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@+id/checkBox30Minutos"
-            app:layout_constraintStart_toStartOf="@+id/checkBox30Minutos"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox30Minutos" />
 
         <TextView
             android:id="@+id/textViewPrecio1Hora"
@@ -121,18 +121,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewPrecio30Minutos" />
 
-        <CheckBox
-            android:id="@+id/checkBox2Horas"
-            android:layout_width="0dp"
-            android:layout_height="33dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/check_box_2_horas"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="@+id/checkBox1MediaHora"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/checkBox1MediaHora"
-            app:layout_constraintTop_toTopOf="@+id/checkBox1MediaHora" />
-
         <TextView
             android:id="@+id/textViewPrecio1MediaHora"
             android:layout_width="0dp"
@@ -145,6 +133,18 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox1MediaHora" />
+
+        <CheckBox
+            android:id="@+id/checkBox2Horas"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/check_box_2_horas"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBox1MediaHora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBox1MediaHora"
+            app:layout_constraintTop_toTopOf="@+id/checkBox1MediaHora" />
 
         <TextView
             android:id="@+id/textView2Horas"

@@ -34,4 +34,13 @@
     <string name="text_view_paseo_media_hora">$7</string>
     <string name="text_view_paseo_2_horas">$9</string>
     <string name="button_aceptar_paseo">Aceptar</string>
+    <string name="bath_tittle">Baños</string>
+    <string name="text_view_info_baño"> Nuestro Servicio de Bañar a tu  perro ofrece varias kits con nuestro mejores productos</string>
+    <string name="check_box_baño_basico">Baño Básico</string>
+    <string name="check_box_baño_completo">Baño Completo</string>
+    <string name="check_box_baño_premium">Baño Premium</string>
+    <string name="text_view_baño_basico">Shampoo + Acondicionador - $12</string>
+    <string name="text_view_baño_completo">Shampoo + Acondicionador + Arreglo a tigera de patas - $18</string>
+    <string name="text_view_baño_premium">Shampoo + Acondicionador + Arreglo a tigera de patas + Peinado - $25</string>
+    <string name="button_aceptar_baño">Aceptar</string>
 </resources>
