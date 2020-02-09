@@ -53,4 +53,13 @@
     <string name="text_view_hospedaje_completo">Hospedaje + Comida - $20</string>
     <string name="text_view_hospedaje_premium">Hospedaje + Comida + Aseo - $25</string>
     <string name="button_aceptar_hospedaje">Aceptar</string>
+    <string name="hair_tittle">Peluquería</string>
+    <string name="text_view_info_peluqueria">Nuestro servicio de salón de belleza ofrece a su perro nuestro mejor cuidado y atención.</string>
+    <string name="check_box_servicio_basico">Servicio Básico</string>
+    <string name="check_box_servicio_completo">Servicio Completo</string>
+    <string name="check_box_servicio_premium">Servicio Premium</string>
+    <string name="text_view_servicio_basico">Corte de Pelo - $9</string>
+    <string name="text_view_servicio_completo">Corte de Pelo + Accesorios - $13</string>
+    <string name="text_view_servicio_premium">Corte de Pelo + Accesorios + Pedicura - $16</string>
+    <string name="button_aceptar_peluqueria">Aceptar</string>
 </resources>
