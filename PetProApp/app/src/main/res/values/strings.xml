@@ -73,5 +73,13 @@
     <string name="text_view_descripcion">Descripción de la mascota*:</string>
     <string name="edit_text_descripcion"></string>
     <string name="button_continuar_registro_mascota">Continuar</string>
+    <string name="user_data_tittle">Datos Usuario</string>
+    <string name="text_view_nombre_consulta">Nombre:</string>
+    <string name="text_view_apellido_consulta">Apellido:</string>
+    <string name="text_view_email_consulta">Correo electrónico:</string>
+    <string name="text_view_telefono_consulta">Teléfono:</string>
+    <string name="button_aceptar_consulta_datos_usuario">Aceptar</string>
+
+
 </resources>
 
