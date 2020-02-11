@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "295438756282-vt2m1r2c5k9q9l9kh18k4rmpthn1otar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moviles.petproapp",
+            "certificate_hash": "f3e5deaaed3ad541e61eebe203d4c97019e2de26"
+          }
+        },
+        {
           "client_id": "295438756282-fbtgl9gr5ioa228v76b5260so995g1m3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

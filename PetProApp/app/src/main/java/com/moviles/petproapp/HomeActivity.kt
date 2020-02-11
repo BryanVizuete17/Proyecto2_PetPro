@@ -38,6 +38,12 @@ class HomeActivity : AppCompatActivity() {
         val prIntent = Intent(this, HairActivity::class.java)
         startActivity(prIntent)
     }
+    fun onClickButtonPrueba(view: View) {
+        val prIntent = Intent(this, pruebaactivity::class.java)
+        startActivity(prIntent)
+    }
+
+
 
 
 }

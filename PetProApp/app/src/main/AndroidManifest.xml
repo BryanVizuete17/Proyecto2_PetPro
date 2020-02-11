@@ -9,11 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserDataActivity"></activity>
+        <activity
+            android:name=".pruebaactivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+            </activity>
+        <activity android:name=".UserDataActivity" />
         <activity android:name=".RegistryPetActivity" />
         <activity android:name=".HairActivity" />
         <activity android:name=".LodgingActivity" />
-        <activity android:name=".BathActivity" />
+        <activity
+            android:name=".BathActivity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeActivity" />
+        </activity>
         <activity android:name=".WalkActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".VerifyActivity" />
@@ -24,9 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RegistryActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
+
     </application>
 
 </manifest>

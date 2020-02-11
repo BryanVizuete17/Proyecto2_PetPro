@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser
 class LoginActivity : AppCompatActivity() {
 
 
-    // declaracion de variables 
+    // declaracion de variables
     private lateinit var nombreUsuario: EditText
     private lateinit var passwordUsuario: EditText
     private lateinit var usuario: String

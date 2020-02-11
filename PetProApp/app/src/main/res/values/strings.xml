@@ -79,6 +79,7 @@
     <string name="text_view_email_consulta">Correo electrónico:</string>
     <string name="text_view_telefono_consulta">Teléfono:</string>
     <string name="button_aceptar_consulta_datos_usuario">Aceptar</string>
+    <string name="prueba">prueba de actvidad </string>
 
 
 </resources>
